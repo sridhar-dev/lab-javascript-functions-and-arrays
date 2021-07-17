@@ -1,17 +1,58 @@
-// Progression #1: Greatest of the two numbers
+// Progression #1: Greatest of the two numbers 
+function greatestOfTwoNumbers(a, b) {
+  if (a > b)
+    return a;
+  else
+    return b;
+}
+ 
 
 // Progression #2: The lengthy word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+function findScaryWord(words){
+  if(words.length === 0){
+    return null;
+  }
+    max = words[0];
+  for (var i = 0; i < words.length; i++) {
+    if (max.length < words[i].length) {
+      max = words[i];
+    }
+  }
+  return max;
+}
 
 // Progression #3: Net Price
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+function netPrice(numbers){
+  if(numbers.length === 0){
+    return 0;
+  }
+  var sum = 0;
+  for(var i=0; i<numbers.length; i++)
+  {
+    sum += numbers[i];
+  }
+  return sum;
+}
 
 // Progression #4: Calculate the average
 // Progression 4.1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+function midPointOfLevels(numbersAvg){
+  if(numbersAvg.length === 0){
+    return null;
+  }
+  var avg = netPrice(numbersAvg);
+  avg = avg / (numbersAvg.length)
+  return avg;
+ 
+}
+
 
 // Progression 4.2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+
 
 // Progression #5: Unique arrays
 const wordsUnique = [
